@@ -1,0 +1,1 @@
+This folder will hold all your collected csv files so that they may be imported into cardsphere.
