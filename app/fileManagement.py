@@ -12,7 +12,7 @@ def getParentDirectory():
     return Path(os.path.dirname(os.getcwd()))
 
 def getFiles():
-    return getParentDirectory().glob('*.csv')    
+    return Path(os.getcwd()).glob('*.csv')    
 
 def cleanFile(file):
     filteredFile = []
@@ -28,7 +28,7 @@ def createCardSphereCsv(data):
         os.mkdir(folder)
     except:
         pass
-    with open(os.path.join(getParentDirectory(), folder, fileName), "w", newline="") as f:
+    with open(os.path.join(Path(os.getcwd()), folder, fileName), "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerows(data)
     return fileName
@@ -36,12 +36,13 @@ def createCardSphereCsv(data):
 def printResults(debug, duplicates, missing, filename, totalCounted):
     # Alert user that the file has been generated
     # Alert user which cards will have to be added manually
-    print("=============================================================\n")
-    print("| These cards were not found in the databse (mostly tokens) |\n")
-    print("=============================================================\n")
-    for d in debug:
-        # print(d[0] + ' || ' + d[1])
-        print(d)
+    if (len(debug) > 0):
+        print("=============================================================\n")
+        print("| These cards were not found in the databse (mostly tokens) |\n")
+        print("=============================================================\n")
+        for d in debug:
+            # print(d[0] + ' || ' + d[1])
+            print(d)
     print("=============================================================")
     # ---- For Debugging puproses ---- #
     # print("These cards had duplicate entries and not caught:")
