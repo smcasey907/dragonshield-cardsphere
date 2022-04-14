@@ -20,9 +20,7 @@
 
 - [This Project](#about)
 - [Getting Started](#getting_started)
-- [Usage](#usage)
 - [Built Using](#built_using)
-- [TODO](../TODO.md)
 - [Contributing](../CONTRIBUTING.md)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgement)
@@ -117,14 +115,22 @@ The other option is to hit `ctrl+r` and type `cmd`. This will open a command pro
 <br>
 
 #### <u>For MacOS</u>
-
+- Find the extracted folder `dragonshield-cardsphere-main` (if you extracted directly in your downloads folder, that's where it will be).
+- Right-click* the folder and select `New Terminal at Folder`.<br> *<sub>(I'm a lifelong Windows user who sets my Mac up in a similar fashion with a gaming style mouse, so don't judge for the poor Mac terminology)</sub>
+- In the terminal, type `./mac_ds-cs.sh`
+- Once the process is completed, you'll find the .csv files in the `import-to-cardsphere` folder.
 
 <br>
 
 ### <b>Importing to Cardsphere</b> <a name="import_to_cardsphere"></a>
-## Usage <a name="usage"></a>
+- Navigate to [Cardsphere's Haves page](https://www.cardsphere.com/haves).
+- Select the `Actions` tab.
+- Select the Import button to open the Import modal.
+- Select the .csv file you created and Import!
+- I am currently aware that many split cards are not able to be loaded through the import feature and will have to be added manually. This is especially true for Strixhaven, newest Innistrad block, and Neon Dynasty. It's an issue with Cardsphere and they are aware of it.
 
-Add notes about how to use the system.
+Enjoy! Please feel free to post comments and reach out with bug reports. I'll do my best to remedy those situations as I can! Thank you for using this tool!
+
 
 ## Built Using <a name = "built_using"></a>
 
